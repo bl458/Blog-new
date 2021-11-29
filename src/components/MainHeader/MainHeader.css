@@ -1,0 +1,10 @@
+.mainHeader {
+  background-color: black;
+  padding: 1.5rem 1rem;
+}
+
+.mainHeader_link {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}

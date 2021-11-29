@@ -1,16 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import MainHeader from "./components/MainHeader/MainHeader";
 
 import About from "./pages/About";
 import Feed from "./pages/Feed";
-import MainHeader from "./components/MainHeader";
 
-import "./style/App.css";
+import "./App.css";
 
-const App = () => {
-  return (
-    <div className="app">
-      <Router>
+export default class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
         <MainHeader />
         <main>
           <Routes>
@@ -18,9 +19,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
-      </Router>
-    </div>
-  );
-};
-
-export default App;
+      </BrowserRouter>
+    );
+  }
+}
