@@ -7,7 +7,7 @@ const MainHeader = () => {
   return (
     <nav className="mainHeader">
       <Link className="mainHeader_link" to="/">
-        Home
+        Michael Lim
       </Link>
       <Link className="mainHeader_link" to="posts/edit">
         Write
