@@ -9,8 +9,8 @@ const MainHeader = () => {
       <Link className="mainHeader_link" to="/">
         Home
       </Link>
-      <Link className="mainHeader_link" to="about">
-        About
+      <Link className="mainHeader_link" to="posts/edit">
+        Write
       </Link>
     </nav>
   );

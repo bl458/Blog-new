@@ -1,8 +1,7 @@
 import React from "react";
-import { Component } from "react";
 
-export default class Feed extends Component {
+export default class Feed extends React.Component {
   render() {
-    return <div>This is the feed page</div>;
+    return <div className="feed"></div>;
   }
 }
