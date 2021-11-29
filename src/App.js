@@ -1,26 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import MainHeader from "./components/MainHeader/MainHeader";
+import MainHeader from "./components/mainHeader/MainHeader";
 
-import Feed from "./pages/Feed";
+import Feed from "./pages/feed/Feed";
 import PostEditor from "./pages/PostEditor";
 import Post from "./pages/Post";
 
 import "./App.css";
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <MainHeader />
-        <main>
-          <Routes>
-            <Route path="/" element={<Feed />} />
-            <Route path="/posts/edit" element={<PostEditor />} />
-            <Route path="/posts/:postid" element={<Post />} />
-          </Routes>
-        </main>
+        <div className="app">
+          <MainHeader />
+          <div className="app_main">
+            <Routes>
+              <Route path="/" element={<Feed />} />
+              <Route path="/posts/edit" element={<PostEditor />} />
+              <Route path="/posts/:postid" element={<Post />} />
+            </Routes>
+          </div>
+        </div>
       </BrowserRouter>
     );
   }
