@@ -1,6 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import { FEED_DATA } from "../../constants/dataConstant";
+import { POSTS_DATA } from "../../constants/dataConstant";
 import {
   GIT_IMG,
   LIN_IMG,
@@ -19,27 +20,37 @@ import "./Feed.css";
 
 /* TBI Make feed item size responsive to amount of text */
 /* TBI Work on mobile view */
-const Feed = (props) => {
-  const openLIn = () => openInNewTab(MY_LIN_LINK);
-  const openGit = () => openInNewTab(MY_GIT_LINK);
-  const openMyEmail = () => openEmail(MY_EMAIL);
+function Feed(props) {
+  const navigate = useNavigate();
+
+  //Onclick
+  const onClickFeedItem = (post) => {
+    navigate(`/posts/${post["id"]}`, { state: { post } });
+  };
+  const onClickLIn = () => openInNewTab(MY_LIN_LINK);
+  const onClickGit = () => openInNewTab(MY_GIT_LINK);
+  const onClickEmail = () => openEmail(MY_EMAIL);
 
   return (
     <div className="feed">
       <div className="feed_inner">
         <div className="feed_posts">
-          {FEED_DATA.map((f, i) => (
-            <div className="feed_item" key={i}>
+          {POSTS_DATA.map((post, i) => (
+            <div
+              className="feed_item"
+              key={i}
+              onClick={() => onClickFeedItem(post)}
+            >
               <div className="feed_title_wrap">
-                <p className="feed_title">{f["title"]}</p>
-                <p className="feed_titleSub">{f["titleSub"]}</p>
+                <p className="feed_title">{post["title"]}</p>
+                <p className="feed_titleSub">{post["titleSub"]}</p>
                 <p className="feed_createdAt">
                   {/* TBI */}
-                  {f["createdAt"].toDateString()}
+                  {post["createdAt"].toDateString()}
                 </p>
               </div>
               <div className="feed_img_wrap">
-                <img src={f["img"]["src"]} alt="" className="feed_img" />
+                <img src={post["img"]["src"]} alt="" className="feed_img" />
               </div>
             </div>
           ))}
@@ -51,13 +62,13 @@ const Feed = (props) => {
           <img src={MY_IMG} alt="" className="feed_myImg" />
           <p className="feed_about_txt">CS '22 @ Cornell</p>
           <div className="feed_about_links">
-            <button onClick={openLIn} className="feed_icon">
+            <button onClick={onClickLIn} className="feed_icon">
               <img src={LIN_IMG} alt="" className="feed_icon_img" />
             </button>
-            <button onClick={openGit} className="feed_icon">
+            <button onClick={onClickGit} className="feed_icon">
               <img src={GIT_IMG} alt="" className="feed_icon_img" />
             </button>
-            <button onClick={openMyEmail} className="feed_icon">
+            <button onClick={onClickEmail} className="feed_icon">
               <img src={MAIL_IMG} alt="" className="feed_icon_img" />
             </button>
           </div>
@@ -65,6 +76,6 @@ const Feed = (props) => {
       </div>
     </div>
   );
-};
+}
 
 export default Feed;

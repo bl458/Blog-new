@@ -9,7 +9,7 @@ import Post from "./pages/post/Post";
 
 import "./App.css";
 
-const App = () => {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app">
@@ -27,6 +27,6 @@ const App = () => {
       </div>
     </BrowserRouter>
   );
-};
+}
 
 export default App;

@@ -1,7 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-export default class Post extends React.Component {
-  render() {
-    return <div>This is a post</div>;
-  }
+function Post(props) {
+  const { state } = useLocation();
+  const { post } = state;
+  console.log(post);
+
+  return <div>This is a post</div>;
 }
+
+export default Post;
