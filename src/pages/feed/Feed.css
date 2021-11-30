@@ -6,14 +6,14 @@
 }
 
 .feed_inner {
-  width: 85%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: row;
 }
 
 .feed_posts {
-  width: 75%;
+  flex: 0.8;
   padding: 36px 20px;
   /* background-color: aqua; */
 }
@@ -29,7 +29,7 @@
 }
 
 .feed_title_wrap {
-  width: 70%;
+  width: 100%;
   word-wrap: break-word;
   /* background-color: orange; */
   display: flex;
@@ -59,10 +59,11 @@
 }
 
 .feed_img_wrap {
-  width: 30%;
+  width: 500px;
   overflow: hidden;
   /* background-color: purple; */
   border-radius: 8px;
+  margin-left: 20px;
 }
 
 .feed_img {
@@ -73,36 +74,31 @@
   height: 100%;
 }
 
+.feed_divider {
+  /* background-color: blue; */
+  width: 30px;
+}
+
 .feed_about {
-  width: 25%;
-  height: 100%;
-  /* background-color: green; */
+  flex: 0.2;
+  padding: 36px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.feed_myImg_wrap {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 150px;
-  margin: 36px 0 20px 0;
+  /* background-color: green; */
 }
 
 .feed_myImg {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  border-radius: 125px;
 }
 
 .feed_about_txt {
   font-size: 20px;
   line-height: 28px;
   font-weight: bold;
-  margin: 0 0 20px 0;
+  margin: 20px 0 10px 0;
+  text-align: center;
 }
 
 .feed_about_links {
@@ -110,11 +106,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-width: 30%;
 }
 
 .feed_icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   padding: 0;
   border: none;
@@ -122,6 +119,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 2.5px 0 2.5px;
 }
 
 .feed_icon:hover {

@@ -14,7 +14,10 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <MainHeader />
+          <div className="app_mainHeader">
+            <MainHeader />
+          </div>
+
           <div className="app_main">
             <Routes>
               <Route path="/" element={<Feed />} />

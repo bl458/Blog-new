@@ -18,6 +18,7 @@ import { openEmail, openInNewTab } from "../../helper/miscHelper";
 import "./Feed.css";
 
 /* TBI Make feed item size responsive to amount of text */
+/* TBI Work on mobile view */
 export default class Feed extends React.Component {
   render() {
     const openLIN = () => openInNewTab(MY_LIN_LINK);
@@ -45,11 +46,10 @@ export default class Feed extends React.Component {
             ))}
           </div>
 
+          <div className="feed_divider" />
+
           <div className="feed_about">
-            <div className="feed_myImg_wrap">
-              <img src={MY_IMG} alt="" className="feed_myImg" />
-              {/* <img src="" alt="" className="feed_myImg" /> */}
-            </div>
+            <img src={MY_IMG} alt="" className="feed_myImg" />
             <p className="feed_about_txt">CS '22 @ Cornell</p>
             <div className="feed_about_links">
               <button onClick={openLIN} className="feed_icon">
