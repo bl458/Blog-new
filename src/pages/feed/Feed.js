@@ -1,13 +1,29 @@
 import React from "react";
 
-import { FEED_DATA } from "../../constants/data";
-import { GIT_IMG, LIN_IMG, MAIL_IMG, MY_IMG } from "../../constants/image";
+import { FEED_DATA } from "../../constants/dataConstant";
+import {
+  GIT_IMG,
+  LIN_IMG,
+  MAIL_IMG,
+  MY_IMG,
+} from "../../constants/imageConstant";
+import {
+  MY_GIT_LINK,
+  MY_LIN_LINK,
+  MY_EMAIL,
+} from "../../constants/miscConstant";
+
+import { openEmail, openInNewTab } from "../../helper/miscHelper";
 
 import "./Feed.css";
 
 /* TBI Make feed item size responsive to amount of text */
 export default class Feed extends React.Component {
   render() {
+    const openLIN = () => openInNewTab(MY_LIN_LINK);
+    const openGit = () => openInNewTab(MY_GIT_LINK);
+    const openMyEmail = () => openEmail(MY_EMAIL);
+
     return (
       <div className="feed">
         <div className="feed_inner">
@@ -36,9 +52,15 @@ export default class Feed extends React.Component {
             </div>
             <p className="feed_about_txt">CS '22 @ Cornell</p>
             <div className="feed_about_links">
-              <img src={LIN_IMG} alt="" className="feed_icon" />
-              <img src={GIT_IMG} alt="" className="feed_icon" />
-              <img src={MAIL_IMG} alt="" className="feed_icon" />
+              <button onClick={openLIN} className="feed_icon">
+                <img src={LIN_IMG} alt="" className="feed_icon_img" />
+              </button>
+              <button onClick={openGit} className="feed_icon">
+                <img src={GIT_IMG} alt="" className="feed_icon_img" />
+              </button>
+              <button onClick={openMyEmail} className="feed_icon">
+                <img src={MAIL_IMG} alt="" className="feed_icon_img" />
+              </button>
             </div>
           </div>
         </div>
