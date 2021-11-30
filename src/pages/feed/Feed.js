@@ -19,52 +19,52 @@ import "./Feed.css";
 
 /* TBI Make feed item size responsive to amount of text */
 /* TBI Work on mobile view */
-export default class Feed extends React.Component {
-  render() {
-    const openLIN = () => openInNewTab(MY_LIN_LINK);
-    const openGit = () => openInNewTab(MY_GIT_LINK);
-    const openMyEmail = () => openEmail(MY_EMAIL);
+const Feed = (props) => {
+  const openLIn = () => openInNewTab(MY_LIN_LINK);
+  const openGit = () => openInNewTab(MY_GIT_LINK);
+  const openMyEmail = () => openEmail(MY_EMAIL);
 
-    return (
-      <div className="feed">
-        <div className="feed_inner">
-          <div className="feed_posts">
-            {FEED_DATA.map((f, i) => (
-              <div className="feed_item" key={i}>
-                <div className="feed_title_wrap">
-                  <p className="feed_title">{f["title"]}</p>
-                  <p className="feed_titleSub">{f["titleSub"]}</p>
-                  <p className="feed_createdAt">
-                    {/* TBI */}
-                    {f["createdAt"].toDateString()}
-                  </p>
-                </div>
-                <div className="feed_img_wrap">
-                  <img src={f["img"]["src"]} alt="" className="feed_img" />
-                </div>
+  return (
+    <div className="feed">
+      <div className="feed_inner">
+        <div className="feed_posts">
+          {FEED_DATA.map((f, i) => (
+            <div className="feed_item" key={i}>
+              <div className="feed_title_wrap">
+                <p className="feed_title">{f["title"]}</p>
+                <p className="feed_titleSub">{f["titleSub"]}</p>
+                <p className="feed_createdAt">
+                  {/* TBI */}
+                  {f["createdAt"].toDateString()}
+                </p>
               </div>
-            ))}
-          </div>
-
-          <div className="feed_divider" />
-
-          <div className="feed_about">
-            <img src={MY_IMG} alt="" className="feed_myImg" />
-            <p className="feed_about_txt">CS '22 @ Cornell</p>
-            <div className="feed_about_links">
-              <button onClick={openLIN} className="feed_icon">
-                <img src={LIN_IMG} alt="" className="feed_icon_img" />
-              </button>
-              <button onClick={openGit} className="feed_icon">
-                <img src={GIT_IMG} alt="" className="feed_icon_img" />
-              </button>
-              <button onClick={openMyEmail} className="feed_icon">
-                <img src={MAIL_IMG} alt="" className="feed_icon_img" />
-              </button>
+              <div className="feed_img_wrap">
+                <img src={f["img"]["src"]} alt="" className="feed_img" />
+              </div>
             </div>
+          ))}
+        </div>
+
+        <div className="feed_divider" />
+
+        <div className="feed_about">
+          <img src={MY_IMG} alt="" className="feed_myImg" />
+          <p className="feed_about_txt">CS '22 @ Cornell</p>
+          <div className="feed_about_links">
+            <button onClick={openLIn} className="feed_icon">
+              <img src={LIN_IMG} alt="" className="feed_icon_img" />
+            </button>
+            <button onClick={openGit} className="feed_icon">
+              <img src={GIT_IMG} alt="" className="feed_icon_img" />
+            </button>
+            <button onClick={openMyEmail} className="feed_icon">
+              <img src={MAIL_IMG} alt="" className="feed_icon_img" />
+            </button>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Feed;
