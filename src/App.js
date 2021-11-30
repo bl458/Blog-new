@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainHeader from "./components/mainHeader/MainHeader";
 
 import Feed from "./pages/feed/Feed";
-import PostEditor from "./pages/PostEditor";
+import PostEdit from "./pages/postEdit/PostEditor";
 import Post from "./pages/post/Post";
 
 import "./App.css";
@@ -20,7 +20,7 @@ function App(props) {
         <div className="app_main">
           <Routes>
             <Route path="/" element={<Feed />} />
-            <Route path="/posts/edit" element={<PostEditor />} />
+            <Route path="/posts/edit" element={<PostEdit />} />
             <Route path="/posts/:postid" element={<Post />} />
           </Routes>
         </div>
