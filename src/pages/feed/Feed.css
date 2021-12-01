@@ -13,7 +13,7 @@
 }
 
 .feed_posts {
-  flex: 0.8;
+  flex: 1;
   padding: 36px 20px;
   /* background-color: aqua; */
 }
@@ -80,12 +80,15 @@
 }
 
 .feed_about {
-  flex: 0.2;
+  width: 290px;
+  /* background-color: green; */
+}
+
+.feed_about_inner {
   padding: 36px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: green; */
 }
 
 .feed_myImg {

@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainHeader from "./components/mainHeader/MainHeader";
 
 import Feed from "./pages/feed/Feed";
-import PostEdit from "./pages/postEdit/PostEditor";
+import PostEdit from "./pages/postEdit/PostEdit";
 import Post from "./pages/post/Post";
 
 import "./App.css";

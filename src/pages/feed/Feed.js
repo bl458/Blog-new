@@ -59,18 +59,20 @@ function Feed(props) {
         <div className="feed_divider" />
 
         <div className="feed_about">
-          <img src={MY_IMG} alt="" className="feed_myImg" />
-          <p className="feed_about_txt">CS '22 @ Cornell</p>
-          <div className="feed_about_links">
-            <button onClick={onClickLIn} className="feed_icon">
-              <img src={LIN_IMG} alt="" className="feed_icon_img" />
-            </button>
-            <button onClick={onClickGit} className="feed_icon">
-              <img src={GIT_IMG} alt="" className="feed_icon_img" />
-            </button>
-            <button onClick={onClickEmail} className="feed_icon">
-              <img src={MAIL_IMG} alt="" className="feed_icon_img" />
-            </button>
+          <div className="feed_about_inner">
+            <img src={MY_IMG} alt="" className="feed_myImg" />
+            <p className="feed_about_txt">CS '22 @ Cornell</p>
+            <div className="feed_about_links">
+              <button onClick={onClickLIn} className="feed_icon">
+                <img src={LIN_IMG} alt="" className="feed_icon_img" />
+              </button>
+              <button onClick={onClickGit} className="feed_icon">
+                <img src={GIT_IMG} alt="" className="feed_icon_img" />
+              </button>
+              <button onClick={onClickEmail} className="feed_icon">
+                <img src={MAIL_IMG} alt="" className="feed_icon_img" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
