@@ -28,6 +28,10 @@
   flex-direction: row;
 }
 
+.feed_item:hover {
+  cursor: pointer;
+}
+
 .feed_title_wrap {
   width: 100%;
   word-wrap: break-word;
@@ -58,7 +62,7 @@
   line-height: 24px;
 }
 
-.feed_img_wrap {
+.feed_imgWrap {
   width: 500px;
   overflow: hidden;
   /* background-color: purple; */

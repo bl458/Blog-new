@@ -49,7 +49,7 @@ function Feed(props) {
                   {post["createdAt"].toDateString()}
                 </p>
               </div>
-              <div className="feed_img_wrap">
+              <div className="feed_imgWrap">
                 <img src={post["img"]["src"]} alt="" className="feed_img" />
               </div>
             </div>
