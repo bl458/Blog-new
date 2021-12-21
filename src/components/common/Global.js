@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.15em;
     margin: 0;
   }
-/* 
+
   p {
     opacity: 0.6;
     line-height: 1.5;
@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
 
   img {
     max-width: 100%;
-  } */
+  }
 `;
 
 export default GlobalStyles;

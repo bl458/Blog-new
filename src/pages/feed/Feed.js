@@ -16,8 +16,6 @@ import {
 
 import { openEmail, openInNewTab } from "../../helper/miscHelper";
 
-import "./Feed.css";
-
 /* TBI Make feed item size responsive to amount of text */
 /* TBI Work on mobile view */
 function Feed(props) {
