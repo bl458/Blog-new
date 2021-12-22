@@ -1,5 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import { StyledFeed, About, FeedItem } from "./Feed.styled";
+import { Flexbox } from "../../components/common/Flexbox.styled";
 
 import { POSTS_DATA } from "../../constants/dataConstant";
 import {
@@ -18,7 +20,7 @@ import { openEmail, openInNewTab } from "../../helper/miscHelper";
 
 /* TBI Make feed item size responsive to amount of text */
 /* TBI Work on mobile view */
-function Feed(props) {
+function Feed() {
   const navigate = useNavigate();
 
   //Onclick
@@ -30,51 +32,33 @@ function Feed(props) {
   const onClickEmail = () => openEmail(MY_EMAIL);
 
   return (
-    <div className="feed">
-      <div className="feed_inner">
-        <div className="feed_posts">
-          {POSTS_DATA.map((post, i) => (
-            <div
-              className="feed_item"
-              key={i}
-              onClick={() => onClickFeedItem(post)}
-            >
-              <div className="feed_title_wrap">
-                <p className="feed_title">{post["title"]}</p>
-                <p className="feed_titleSub">{post["titleSub"]}</p>
-                <p className="feed_createdAt">
-                  {/* TBI */}
-                  {post["createdAt"].toDateString()}
-                </p>
-              </div>
-              <div className="feed_imgWrap">
-                <img src={post["img"]["src"]} alt="" className="feed_img" />
-              </div>
+    <StyledFeed>
+      <div>
+        {POSTS_DATA.map((post, i) => (
+          <FeedItem key={i} onClick={() => onClickFeedItem(post)}>
+            <div>
+              <h2>{post["title"]}</h2>
+              <p>{post["titleSub"]}</p>
+              <p>
+                {/* TBI */}
+                {post["createdAt"].toDateString()}
+              </p>
             </div>
-          ))}
-        </div>
-
-        <div className="feed_divider" />
-
-        <div className="feed_about">
-          <div className="feed_about_inner">
-            <img src={MY_IMG} alt="" className="feed_myImg" />
-            <p className="feed_about_txt">CS '22 @ Cornell</p>
-            <div className="feed_about_links">
-              <button onClick={onClickLIn} className="feed_icon">
-                <img src={LIN_IMG} alt="" className="feed_icon_img" />
-              </button>
-              <button onClick={onClickGit} className="feed_icon">
-                <img src={GIT_IMG} alt="" className="feed_icon_img" />
-              </button>
-              <button onClick={onClickEmail} className="feed_icon">
-                <img src={MAIL_IMG} alt="" className="feed_icon_img" />
-              </button>
-            </div>
-          </div>
-        </div>
+            <img src={post["img"]["src"]} alt="" />
+          </FeedItem>
+        ))}
       </div>
-    </div>
+
+      <About>
+        <img src={MY_IMG} alt="" />
+        <p>CS '22 @ Cornell</p>
+        <div>
+          <img src={LIN_IMG} alt="" onClick={onClickLIn} />
+          <img src={GIT_IMG} alt="" onClick={onClickGit} />
+          <img src={MAIL_IMG} alt="" onClick={onClickEmail} />
+        </div>
+      </About>
+    </StyledFeed>
   );
 }
 
