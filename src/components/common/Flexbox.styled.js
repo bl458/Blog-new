@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Flexbox = styled.div`
-  flex-direction: row;
+  display: flex;
   align-items: center;
 
   & > div {
