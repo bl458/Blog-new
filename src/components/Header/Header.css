@@ -1,14 +1,13 @@
-.mainHeader {
+.header {
   display: flex;
   justify-content: space-between;
   background-color: black;
   padding: 32px 32px;
 }
 
-.mainHeader_link {
+.header__link {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 1.75em;
 }

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import MainHeader from "./components/MainHeader/MainHeader";
+import Header from "./components/Header/Header";
 
 import Feed from "./pages/feed/Feed";
 import PostEdit from "./pages/postEdit/PostEdit";
@@ -11,18 +11,13 @@ import "./App.css";
 function App(props) {
   return (
     <BrowserRouter>
-      <div className="app">
-        <div className="app_mainHeader">
-          <MainHeader />
-        </div>
-
-        <div className="app_main">
-          <Routes>
-            <Route path="/" element={<Feed />} />
-            <Route path="/posts/edit" element={<PostEdit />} />
-            <Route path="/posts/:postid" element={<Post />} />
-          </Routes>
-        </div>
+      <Header />
+      <div className="app__main">
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/posts/edit" element={<PostEdit />} />
+          <Route path="/posts/:postid" element={<Post />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

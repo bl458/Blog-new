@@ -32,47 +32,41 @@ function Feed(props) {
 
   return (
     <div className="feed">
-      <div className="feed_inner">
-        <div className="feed_posts">
-          {POSTS_DATA.map((post, i) => (
-            <div
-              className="feed_item"
-              key={i}
-              onClick={() => onClickFeedItem(post)}
-            >
-              <div className="feed_title_wrap">
-                <p className="feed_title">{post["title"]}</p>
-                <p className="feed_titleSub">{post["titleSub"]}</p>
-                <p className="feed_createdAt">
-                  {/* TBI */}
-                  {post["createdAt"].toDateString()}
-                </p>
-              </div>
-              <div className="feed_imgWrap">
-                <img src={post["img"]["src"]} alt="" className="feed_img" />
-              </div>
+      <div className="feed__posts">
+        {POSTS_DATA.map((post, i) => (
+          <div
+            className="feed__item"
+            key={i}
+            onClick={() => onClickFeedItem(post)}
+          >
+            <div className="feed__title-wrap">
+              <h1>{post["title"]}</h1>
+              <p className="feed__titleSub">{post["titleSub"]}</p>
+              <p>
+                {/* TBI */}
+                {post["createdAt"].toDateString()}
+              </p>
             </div>
-          ))}
-        </div>
-
-        <div className="feed_divider" />
-
-        <div className="feed_about">
-          <div className="feed_about_inner">
-            <img src={MY_IMG} alt="" className="feed_myImg" />
-            <p className="feed_about_txt">CS '22 @ Cornell</p>
-            <div className="feed_about_links">
-              <button onClick={onClickLIn} className="feed_icon">
-                <img src={LIN_IMG} alt="" className="feed_icon_img" />
-              </button>
-              <button onClick={onClickGit} className="feed_icon">
-                <img src={GIT_IMG} alt="" className="feed_icon_img" />
-              </button>
-              <button onClick={onClickEmail} className="feed_icon">
-                <img src={MAIL_IMG} alt="" className="feed_icon_img" />
-              </button>
+            <div className="feed__image-wrap">
+              <img src={post["img"]["src"]} alt="" className="feed__image" />
             </div>
           </div>
+        ))}
+      </div>
+
+      <div className="feed__about">
+        <img src={MY_IMG} alt="" />
+        <p className="feed_about_txt">CS '22 @ Cornell</p>
+        <div className="feed_about_links">
+          {/* <button onClick={onClickLIn} className="feed_icon">
+            <img src={LIN_IMG} alt="" className="feed_icon_img" />
+          </button>
+          <button onClick={onClickGit} className="feed_icon">
+            <img src={GIT_IMG} alt="" className="feed_icon_img" />
+          </button>
+          <button onClick={onClickEmail} className="feed_icon">
+            <img src={MAIL_IMG} alt="" className="feed_icon_img" />
+          </button> */}
         </div>
       </div>
     </div>
