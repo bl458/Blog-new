@@ -19,7 +19,7 @@ import "./Feed.css";
 
 /* TBI Make feed item size responsive to amount of text */
 /* TBI Work on mobile view */
-function Feed(props) {
+function Feed() {
   const navigate = useNavigate();
 
   //Onclick
@@ -39,7 +39,7 @@ function Feed(props) {
             key={i}
             onClick={() => onClickFeedItem(post)}
           >
-            <div className="feed__title-wrap">
+            <div className="feed__item-title-wrap">
               <h1>{post["title"]}</h1>
               <p className="feed__titleSub">{post["titleSub"]}</p>
               <p>
@@ -47,26 +47,41 @@ function Feed(props) {
                 {post["createdAt"].toDateString()}
               </p>
             </div>
-            <div className="feed__image-wrap">
-              <img src={post["img"]["src"]} alt="" className="feed__image" />
+            <div className="feed__item-image-wrap">
+              <img
+                src={post["img"]["src"]}
+                alt=""
+                className="feed__item-image"
+              />
             </div>
           </div>
         ))}
       </div>
 
       <div className="feed__about">
-        <img src={MY_IMG} alt="" />
-        <p className="feed_about_txt">CS '22 @ Cornell</p>
-        <div className="feed_about_links">
-          {/* <button onClick={onClickLIn} className="feed_icon">
-            <img src={LIN_IMG} alt="" className="feed_icon_img" />
-          </button>
-          <button onClick={onClickGit} className="feed_icon">
-            <img src={GIT_IMG} alt="" className="feed_icon_img" />
-          </button>
-          <button onClick={onClickEmail} className="feed_icon">
-            <img src={MAIL_IMG} alt="" className="feed_icon_img" />
-          </button> */}
+        <div className="feed__my-image-wrap">
+          <img src={MY_IMG} alt="" className="feed__my-image" />
+        </div>
+        <h3>CS '22 @ Cornell</h3>
+        <div className="feed__links">
+          <img
+            src={LIN_IMG}
+            alt=""
+            className="feed__link-img"
+            onClick={onClickLIn}
+          />
+          <img
+            src={GIT_IMG}
+            alt=""
+            className="feed__link-img"
+            onClick={onClickGit}
+          />
+          <img
+            src={MAIL_IMG}
+            alt=""
+            className="feed__link-img"
+            onClick={onClickEmail}
+          />
         </div>
       </div>
     </div>

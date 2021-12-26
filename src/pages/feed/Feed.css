@@ -1,12 +1,13 @@
 .feed {
   display: flex;
   padding: 36px 0;
+  height: 100%;
 }
 
 .feed__posts {
-  flex: 0.7;
   /* background-color: blue; */
-  padding: 0 0 0 20px;
+  flex: 0.7;
+  height: 100%;
 }
 
 .feed__item {
@@ -15,9 +16,11 @@
   height: 30%;
 }
 
-.feed__title-wrap {
+.feed__item-title-wrap {
+  /* background-color: yellow; */
   flex: 0.7;
-  background-color: yellow;
+  height: 100%;
+  margin: 0 30px 0 0;
 }
 
 .feed__titleSub {
@@ -26,23 +29,45 @@
   margin: 10px 0 10px 0;
 }
 
-.feed__image-wrap {
+.feed__item-image-wrap {
+  /* background-color: red; */
   flex: 0.3;
   height: 100%;
-  background-color: red;
 }
 
-.feed__image {
+.feed__item-image {
   width: 100%;
   height: 100%;
 }
 
 .feed__about {
-  flex: 0.3;
   /* background-color: aqua; */
+  flex: 0.3;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.feed__my-image-wrap {
+  width: 60%;
+  margin: 0 0 15px 0;
+}
+
+.feed__my-image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.feed__links {
+  display: flex;
+  margin: 15px 0 0 0;
+  gap: 5px;
+}
+
+.feed__link-img {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 768px) {
