@@ -1,0 +1,22 @@
+.postEdit__title {
+  text-align: center;
+  margin: 0 0 1.875rem 0;
+}
+
+.postEdit__titleSub {
+  margin: 1.875rem 0 0.625rem 0;
+}
+
+.postEdit__titleInput {
+  width: 100%;
+  padding: 0.625rem;
+}
+
+.postEdit__uploadBtn {
+  padding: 0.2rem;
+}
+
+.postEdit__contentInput {
+  width: 100%;
+  padding: 0.625rem;
+}
