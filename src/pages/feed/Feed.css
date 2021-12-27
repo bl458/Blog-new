@@ -1,7 +1,7 @@
 .feed {
   display: flex;
-  padding: 2.25rem 32px;
   height: 100%;
+  padding: 0 20px;
 }
 
 .feed__posts {
@@ -14,6 +14,11 @@
   display: flex;
   margin: 0 0 20px 0;
   height: 30%;
+  cursor: pointer;
+}
+
+.feed__item:hover {
+  opacity: 0.6;
 }
 
 .feed__item-title-wrap {
@@ -68,6 +73,10 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
+}
+
+.feed__link-img:hover {
+  opacity: 0.6;
 }
 
 @media (max-width: 992px) {
