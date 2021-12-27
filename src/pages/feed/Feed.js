@@ -38,8 +38,8 @@ function Feed() {
             onClick={() => onClickFeedItem(post)}
           >
             <div className="feed__item-title-wrap">
-              <h1>{post["title"]}</h1>
-              <p className="feed__titleSub">{post["content"]}</p>
+              <h1 className="feed__item-title">{post["title"]}</h1>
+              <p className="feed__item-content">{post["content"]}</p>
               <p>
                 {/* TBI */}
                 {post["createdAt"].toDateString()}
