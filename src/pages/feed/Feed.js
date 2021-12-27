@@ -39,7 +39,7 @@ function Feed() {
           >
             <div className="feed__item-title-wrap">
               <h1>{post["title"]}</h1>
-              <p className="feed__titleSub">{post["titleSub"]}</p>
+              <p className="feed__titleSub">{post["content"]}</p>
               <p>
                 {/* TBI */}
                 {post["createdAt"].toDateString()}
