@@ -12,11 +12,17 @@
   padding: 0.625rem;
 }
 
-.postEdit__uploadBtn {
-  padding: 0.2rem;
+.postEdit__postImg {
+  width: 30%;
 }
 
 .postEdit__contentInput {
   width: 100%;
   padding: 0.625rem;
+}
+
+.postEdit__submitBtn {
+  width: 100px;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
 }
