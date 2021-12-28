@@ -6,7 +6,7 @@ import "./Post.css";
 /* 
   TBI Add scrollup button, flow diagram  
 */
-function Post(props) {
+function Post() {
   const { state } = useLocation();
   const { post } = state;
   console.log(post);

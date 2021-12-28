@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 
-const MainHeader = () => {
+const Header = () => {
   return (
     <nav className="header">
       <Link className="header__link" to="/">
@@ -15,4 +15,4 @@ const MainHeader = () => {
   );
 };
 
-export default MainHeader;
+export default Header;

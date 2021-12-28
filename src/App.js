@@ -8,7 +8,7 @@ import Post from "./pages/post/Post";
 
 import "./App.css";
 
-function App(props) {
+function App() {
   return (
     <BrowserRouter>
       <Header />

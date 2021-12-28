@@ -1,6 +1,6 @@
 import "./PostEdit.css";
 
-function PostEdit(props) {
+function PostEdit() {
   return (
     <div>
       <h1 className="postEdit__title">Create New Post</h1>
