@@ -14,9 +14,9 @@ function App() {
       <Header />
       <div className="app__main">
         <Routes>
-          <Route path="/" element={<Feed />} />
           <Route path="/posts/edit" element={<PostEdit />} />
           <Route path="/posts/:postid" element={<Post />} />
+          <Route path="/*" element={<Feed />} />
         </Routes>
       </div>
     </BrowserRouter>

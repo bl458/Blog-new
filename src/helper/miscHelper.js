@@ -6,3 +6,11 @@ export const openInNewTab = (url) => {
 export const openEmail = (email) => {
   openInNewTab("mailto:" + email);
 };
+
+export const isPostsPath = (pathname) => {
+  return (
+    pathname &&
+    typeof pathname === "string" &&
+    pathname.match(/\/posts\/[0-9]+/)
+  );
+};

@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 
 import "./Post.css";
@@ -8,8 +7,7 @@ import "./Post.css";
 */
 function Post() {
   const { state } = useLocation();
-  const { post } = state;
-  console.log(post);
+  const { post } = state || {};
 
   return (
     <div className="post">
