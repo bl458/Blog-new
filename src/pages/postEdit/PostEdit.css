@@ -3,25 +3,25 @@
   margin: 0 0 1.875rem 0;
 }
 
-.postEdit__titleSub {
+.postEdit__title-sub {
   margin: 1.875rem 0 0.625rem 0;
 }
 
-.postEdit__titleInput {
+.postEdit__title-input {
   width: 100%;
   padding: 0.625rem;
 }
 
-.postEdit__postImg {
+.postEdit__post-img {
   width: 30%;
 }
 
-.postEdit__contentInput {
+.postEdit__content-input {
   width: 100%;
   padding: 0.625rem;
 }
 
-.postEdit__submitBtn {
+.postEdit__submit-btn {
   width: 100px;
   padding: 0.625rem;
   margin: 0.625rem 0;

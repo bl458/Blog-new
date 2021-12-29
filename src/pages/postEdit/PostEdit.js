@@ -29,19 +29,19 @@ function PostEdit() {
   return (
     <div>
       <h1 className="postEdit__title">{getTitle()}</h1>
-      <h2 className="postEdit__titleSub">Title</h2>
-      <input type="text" className="postEdit__titleInput" />
+      <h2 className="postEdit__title-sub">Title</h2>
+      <input type="text" className="postEdit__title-input" />
 
-      <h2 className="postEdit__titleSub">Sub Title</h2>
-      <input type="text" className="postEdit__titleInput" />
+      <h2 className="postEdit__title-sub">Sub Title</h2>
+      <input type="text" className="postEdit__title-input" />
 
-      <h2 className="postEdit__titleSub">Image</h2>
+      <h2 className="postEdit__title-sub">Image</h2>
       {postImg && (
         <>
           <img
             src={URL.createObjectURL(postImg)}
             alt=""
-            className="postEdit__postImg"
+            className="postEdit__post-img"
           />
           <br />
           <br />
@@ -54,10 +54,10 @@ function PostEdit() {
         onChange={onUploadImg}
       />
 
-      <h2 className="postEdit__titleSub">Content</h2>
-      <textarea rows="40" className="postEdit__contentInput"></textarea>
+      <h2 className="postEdit__title-sub">Content</h2>
+      <textarea rows="40" className="postEdit__content-input"></textarea>
 
-      <button className="postEdit__submitBtn" onClick={onSubmit}>
+      <button className="postEdit__submit-btn" onClick={onSubmit}>
         Submit
       </button>
     </div>

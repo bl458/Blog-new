@@ -13,7 +13,7 @@ function Post() {
   return (
     <div className="post">
       <h2>{post["title"]}</h2>
-      <p className="post__titleSub">{post["titleSub"]}</p>
+      <p className="post__title-sub">{post["titleSub"]}</p>
       <p className="post__created-at">{post["createdAt"].toDateString()}</p>
       {/* TBI need styled components to make img width dynamic based on aspect ratio */}
       {/* <img src={post["img"]["src"]} alt="" className="post__img" /> */}
