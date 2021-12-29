@@ -32,6 +32,9 @@ function PostEdit() {
       <h2 className="postEdit__titleSub">Title</h2>
       <input type="text" className="postEdit__titleInput" />
 
+      <h2 className="postEdit__titleSub">Sub Title</h2>
+      <input type="text" className="postEdit__titleInput" />
+
       <h2 className="postEdit__titleSub">Image</h2>
       {postImg && (
         <>

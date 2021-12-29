@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.post__titleSub {
+  margin: 0.625rem 0 0.4rem 0;
+}
+
 .post__created-at {
-  margin: 1rem 0 0.625rem 0;
+  margin: 0 0 2rem 0;
 }

@@ -35,7 +35,7 @@
   text-overflow: ellipsis;
 }
 
-.feed__item-content {
+.feed__item-titleSub {
   width: 70%;
   word-wrap: break-word;
   margin: 0.625rem 0 0.625rem 0;
